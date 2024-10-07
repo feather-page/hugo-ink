@@ -6,12 +6,9 @@ Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https:/
 ![Screenshot](https://user-images.githubusercontent.com/547147/69119000-3ace9280-0abb-11ea-81bc-5af68433e845.png "Ink light theme")
 
 ## Features
-* Google Analytics integration
 * Syntax highlighting
 * Twitter cards and opengraph tags support
-* Disqus comments
 * RSS feeds
-* Custom CSS/JS
 * Multilingual months support
 
 ## Installation
@@ -28,7 +25,7 @@ For more information read the [official setup guide](https://gohugo.io/overview/
 
 ## Content type
 
-You can specify content type with field `type` in your content. For example static pages can be set as type `page` which are excluded from recent posts and all posts page. You can use site params `mainSections` and `disableDisqusTypes` to control which page types are excluded from recent posts and Disqus comments respectively.
+You can specify content type with field `type` in your content. For example static pages can be set as type `page` which are excluded from recent posts and all posts page. You can use site params `mainSections` to control which page types are excluded from recent posts.
 
 ```md
 ---
