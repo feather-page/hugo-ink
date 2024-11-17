@@ -6,17 +6,24 @@
 		</div>
 	</div>
 	<div class="matter">
-		<h4 class="title small">
-			<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
-		</h4>
+    {{ if isset .Params "short" }}
+    {{ else }}
+		  <h4 class="title small">
+			  <a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
+		  </h4>
+    {{ end }}
 		<span class="description">
-			{{ if isset .Params "description" }}
-				{{ .Description }}
-			{{ else if gt (countrunes (.Content | plainify)) 120 }}
-				{{ slicestr (.Content | plainify) 0 120 | safeHTML }}...
-			{{ else }}
-				{{ .Content | plainify | safeHTML }}
-			{{ end }}
+      {{ if isset .Params "short" }}
+        {{ .Content }}
+      {{ else }}
+        {{ if isset .Params "description" }}
+          {{ .Description }}
+        {{ else if gt (countrunes (.Content | plainify)) 120 }}
+          {{ slicestr (.Content | plainify) 0 120 | safeHTML }}...
+        {{ else }}
+          {{ .Content | plainify | safeHTML }}
+        {{ end }}
+      {{ end }}
 		</span>
 	</div>
 </div>
