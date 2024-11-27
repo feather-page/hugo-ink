@@ -21,14 +21,9 @@
 	{{- template "_internal/schema.html" . -}}
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/twitter_cards.html" . -}}
-	
+
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
 
-    <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" />
- 
-	{{- if or (isset .Site.Params "social") (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
-		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
-	{{ end }}
-		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+  <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" />
 </head>
